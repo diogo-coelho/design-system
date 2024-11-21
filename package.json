@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "@diogo-coelho/design-system",
   "version": "0.0.0-alpha.1",
   "type": "module",
   "main": "dist/main.js",
