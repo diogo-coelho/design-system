@@ -1,6 +1,6 @@
 {
   "name": "@diogo-coelho/design-system",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.2",
   "type": "module",
   "main": "dist/main.js",
   "author": "Diogo Coelho",
@@ -19,7 +19,7 @@
       "import": "./dist/main.js",
       "require": "./dist/main.js"
     },
-    "./index.min.css": "./dist/style.css"
+    "./assets/style.css": "./dist/assets/style.css"
   },
   "types": "./dist/types/main.d.ts",
   "publishConfig": {
