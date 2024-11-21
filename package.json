@@ -1,13 +1,13 @@
 {
-  "name": "@diogo-coelho/design-system",
-  "version": "0.0.0-alpha.3",
+  "name": "@diogo-coelho/design-system-pos-tech",
+  "version": "0.0.0-alpha.4",
   "type": "module",
   "main": "dist/main.js",
   "author": "Diogo Coelho",
   "bugs": {
-    "url": "https://github.com/diogo-coelho/design-system/issues"
+    "url": "https://github.com/diogo-coelho/design-system-pos-tech/issues"
   },
-  "homepage": "https://github.com/diogo-coelho/design-system#readme",
+  "homepage": "https://github.com/diogo-coelho/design-system-pos-tech#readme",
   "files": [
     "dist",
     "package.json",
