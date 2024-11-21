@@ -41,6 +41,7 @@ export default defineConfig({
     },
   },
   build: {
+    cssCodeSplit: true,
     sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
@@ -50,28 +51,17 @@ export default defineConfig({
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       input: Object.fromEntries(
         globSync(['src/components/**/index.tsx', 'src/main.ts']).map((file) => {
-          // This remove `src/` as well as the file extension from each
-          // file, so e.g. src/nested/foo.js becomes nested/foo
           const entryName = path.relative(
             'src',
             file.slice(0, file.length - path.extname(file).length)
           )
-          // This expands the relative paths to absolute paths, so e.g.
-          // src/nested/foo becomes /project/src/nested/foo.js
           const entryUrl = fileURLToPath(new URL(file, import.meta.url))
           return [entryName, entryUrl]
         })
       ),
       output: {
         entryFileNames: '[name].js',
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith('.scss')) {
-            const scssName = path.basename(assetInfo.name, '.scss')
-            console.log('scssName')
-            return `assets/styles/${scssName}.css`
-          }
-          return 'assets/[name][extname]'
-        },
+        assetFileNames: 'assets/[name][extname]',
         globals: {
           react: 'React',
           'react-dom': 'React-dom',
