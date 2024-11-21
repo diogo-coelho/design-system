@@ -1,0 +1,66 @@
+{
+  "name": "app",
+  "version": "0.0.0-alpha.1",
+  "type": "module",
+  "main": "dist/main.js",
+  "author": "Diogo Coelho",
+  "bugs": {
+    "url": "https://github.com/diogo-coelho/design-system/issues"
+  },
+  "homepage": "https://github.com/diogo-coelho/design-system#readme",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "module": "./dist/main.js",
+  "exports": {
+    ".": {
+      "import": "./dist/main.js",
+      "require": "./dist/main.js"
+    },
+    "./index.min.css": "./dist/style.css"
+  },
+  "types": "./dist/types/main.d.ts",
+  "publishConfig": {
+    "@diogo-coelho:registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "stylelint": "stylelint **/*.scss",
+    "stylelint:fix": "stylelint **/*.scss --fix",
+    "prepublishOnly": "npm run build",
+    "test": "exit 0",
+    "publish": "npm publish --access=public"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/node": "^22.9.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "glob": "^11.0.0",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.81.0",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-scss": "^6.9.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.11.0",
+    "vite": "^5.4.10",
+    "vite-plugin-dts": "^4.3.0"
+  }
+}

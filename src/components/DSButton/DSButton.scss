@@ -1,0 +1,224 @@
+.button {
+  height: 48px;
+  font-weight: var(--bb-font-weight-bold);
+  padding: var(--bb-spacing-small) var(--bb-spacing-large);
+  border-radius: var(--bb-border-radius-small);
+  background-color: var(--bb-color-green);
+  color: var(--bb-color-white);
+  border: 2px solid var(--bb-color-green);
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.primary,
+  &.primary:disabled {
+    background-color: var(--bb-color-green);
+    color: var(--bb-color-white);
+    border: 2px solid var(--bb-color-green);
+    transition:
+      background-color 0.2s ease-in,
+      border 0.2s ease-in;
+
+    &:hover:not(:disabled) {
+      background-color: var(--bb-color-black);
+      border: 2px solid var(--bb-color-black);
+      transition:
+        background-color 0.2s ease-out,
+        border 0.2s ease-out;
+    }
+  }
+
+  &.secondary,
+  &.secondary:disabled {
+    background-color: var(--bb-color-dark-grey);
+    color: var(--bb-color-green);
+    border: 2px solid var(--bb-color-dark-grey);
+    transition:
+      background-color 0.2s ease-in,
+      border 0.2s ease-in,
+      color 0.2s ease-out;
+
+    &:hover:not(:disabled) {
+      background-color: var(--bb-color-green);
+      border: 2px solid var(--bb-color-green);
+      color: var(--bb-color-white);
+      transition:
+        background-color 0.2s ease-out,
+        border 0.2s ease-out,
+        color 0.2s ease-out;
+    }
+  }
+
+  &.success,
+  &.success:disabled {
+    background-color: var(--bb-color-light-green);
+    color: var(--bb-color-white);
+    border: 2px solid var(--bb-color-light-green);
+    transition:
+      background-color 0.2s ease-in,
+      border 0.2s ease-in;
+
+    &:hover:not(:disabled) {
+      background-color: var(--bb-color-black);
+      border: 2px solid var(--bb-color-black);
+      transition:
+        background-color 0.2s ease-out,
+        border 0.2s ease-out;
+    }
+  }
+
+  &.danger,
+  &.danger:disabled {
+    background-color: var(--bb-color-red);
+    color: var(--bb-color-white);
+    border: 2px solid var(--bb-color-red);
+    transition:
+      background-color 0.2s ease-in,
+      border 0.2s ease-in;
+
+    &:hover:not(:disabled) {
+      background-color: var(--bb-color-black);
+      border: 2px solid var(--bb-color-black);
+      transition:
+        background-color 0.2s ease-out,
+        border 0.2s ease-out;
+    }
+  }
+
+  &.black,
+  &.black:disabled {
+    background-color: var(--bb-color-black);
+    color: var(--bb-color-white);
+    border: 2px solid var(--bb-color-black);
+    transition:
+      background-color 0.2s ease-in,
+      border 0.2s ease-in;
+
+    &:hover:not(:disabled) {
+      background-color: var(--bb-color-black);
+      border: 2px solid var(--bb-color-black);
+      transition:
+        background-color 0.2s ease-out,
+        border 0.2s ease-out;
+    }
+  }
+
+  &.outline {
+    &.primary,
+    &.primary:disabled {
+      background-color: var(--bb-color-transparent);
+      color: var(--bb-color-green);
+      border: 2px solid var(--bb-color-green);
+      transition:
+        background-color 0.2s ease-in,
+        border 0.2s ease-in,
+        color 0.2s ease-in;
+
+      &:hover:not(:disabled) {
+        background-color: var(--bb-color-green);
+        border: 2px solid var(--bb-color-green);
+        color: var(--bb-color-white);
+        transition:
+          background-color 0.2s ease-out,
+          border 0.2s ease-out,
+          color 0.2s ease-out;
+      }
+    }
+
+    &.secondary,
+    &.secondary:disabled {
+      background-color: var(--bb-color-transparent);
+      color: var(--bb-color-grey);
+      border: 2px solid var(--bb-color-grey);
+      transition:
+        background-color 0.2s ease-in,
+        border 0.2s ease-in,
+        color 0.2s ease-out;
+
+      &:hover:not(:disabled) {
+        background-color: var(--bb-color-grey);
+        border: 2px solid var(--bb-color-grey);
+        color: var(--bb-color-white);
+        transition:
+          background-color 0.2s ease-out,
+          border 0.2s ease-out,
+          color 0.2s ease-out;
+      }
+    }
+
+    &.success,
+    &.success:disabled {
+      background-color: var(--bb-color-transparent);
+      color: var(--bb-color-light-green);
+      border: 2px solid var(--bb-color-light-green);
+      transition:
+        background-color 0.2s ease-in,
+        border 0.2s ease-in,
+        color 0.2s ease-in;
+
+      &:hover:not(:disabled) {
+        background-color: var(--bb-color-light-green);
+        border: 2px solid var(--bb-color-light-green);
+        color: var(--bb-color-white);
+        transition:
+          background-color 0.2s ease-out,
+          border 0.2s ease-out,
+          color 0.2s ease-out;
+      }
+    }
+
+    &.danger,
+    &.danger:disabled {
+      background-color: var(--bb-color-transparent);
+      color: var(--bb-color-red);
+      border: 2px solid var(--bb-color-red);
+      transition:
+        background-color 0.2s ease-in,
+        border 0.2s ease-in,
+        color 0.2s ease-in;
+
+      &:hover:not(:disabled) {
+        background-color: var(--bb-color-red);
+        border: 2px solid var(--bb-color-red);
+        color: var(--bb-color-white);
+        transition:
+          background-color 0.2s ease-out,
+          border 0.2s ease-out,
+          color 0.2s ease-out;
+      }
+    }
+
+    &.black,
+    &.black:disabled {
+      background-color: var(--bb-color-transparent);
+      color: var(--bb-color-black);
+      border: 2px solid var(--bb-color-black);
+      transition:
+        background-color 0.2s ease-in,
+        border 0.2s ease-in,
+        color 0.2s ease-in;
+
+      &:hover:not(:disabled) {
+        background-color: var(--bb-color-black);
+        border: 2px solid var(--bb-color-black);
+        color: var(--bb-color-white);
+        transition:
+          background-color 0.2s ease-out,
+          border 0.2s ease-out,
+          color 0.2s ease-out;
+      }
+    }
+  }
+
+  &.small {
+    width: 100%;
+    max-width: 144px;
+  }
+
+  &.medium {
+    width: 100%;
+    max-width: 250px;
+  }
+}
