@@ -1,0 +1,23 @@
+.icon-button {
+  &-container {
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+
+    &.pointer {
+      cursor: pointer;
+    }
+
+    figure {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: auto;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

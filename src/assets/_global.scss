@@ -1,4 +1,4 @@
-// ------------ Propriedades globais ---------------- //
+/* ------------ Propriedades globais ---------------- */
 
 body {
   font-family: var(--bb-font-family);
@@ -6,7 +6,7 @@ body {
   color: var(--bb-color-black);
 }
 
-.w {
+.width {
   &-100 {
     width: 100%;
   }

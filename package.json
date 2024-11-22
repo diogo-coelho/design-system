@@ -1,6 +1,6 @@
 {
   "name": "@diogo-coelho/design-system-pos-tech",
-  "version": "0.0.0-alpha.4",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/main.js",
   "author": "Diogo Coelho",
