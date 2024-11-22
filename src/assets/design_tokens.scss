@@ -1,16 +1,15 @@
-// ----------- Design Tokens ------------ //
+/* ----------- Design Tokens ------------ */
 
 :root {
-  // ----------- View Ports --------------- //
+  /* ----------- View Ports --------------- */
   --bb-viewport-mobile: 360px;
   --bb-viewport-tablet: 720px;
   --bb-viewport-desktop: 1120px;
   
-  // ----------- Color Tokens ------------- //
-  --bb-color-white: #FFFFFF;
-  --bb-color-black: #000000;
+  /* ----------- Color Tokens ------------- */
+  --bb-color-white: #FFF;
+  --bb-color-black: #000;
   --bb-color-transparent: transparent;
-
   --bb-color-light-green: #47A138;
   --bb-color-light-green-alpha: #47A13880;
   --bb-color-green: #004D61;
@@ -23,12 +22,12 @@
   --bb-color-grey-4: #767676;
   --bb-color-bg: #E4EDE3;
   --bb-color-offwhite: #F5F5F5;
-  --bb-color-gradient-green: linear-gradient(180deg, #004D61 0%, #FFFFFF 100%);
-  --bb-color-overlay-black: rgba(0, 0, 0, 0.6);
+  --bb-color-gradient-green: linear-gradient(180deg, #004D61 0%, #FFF 100%);
+  --bb-color-overlay-black: rgb(0 0 0 / 60%);
 
 
-  // ----------- Font --------------------- //
-  --bb-font-family: Inter, sans-serif;
+  /* ----------- Font --------------------- */
+  --bb-font-family: inter, sans-serif;
   --bb-font-size-small: 13px;
   --bb-font-size-medium: 16px;
   --bb-font-size-regular: 18px;
@@ -36,21 +35,22 @@
   --bb-font-size-extra-large: 25px;
   --bb-font-size-xx-large: 31px;
 
-  // --------- Font-Weight ---------------- //
+  /* --------- Font-Weight ---------------- */
   --bb-font-weight-light: 400;
   --bb-font-weight-normal: 500;
   --bb-font-weight-bold: 600;
   --bb-font-weight-superbold: 700;
 
-  // ----------- Spacing ------------------ //
+  /* ----------- Spacing ------------------ */
   --bb-spacing-small: 8px;
   --bb-spacing-medium: 16px;
   --bb-spacing-large: 24px;
   --bb-spacing-extra-large: 72px;
 
-  // ---------- Border-Radius ------------- //
+  /* ---------- Border-Radius ------------- */
   --bb-border-radius-smallest: 5px;
   --bb-border-radius-small: 8px;
   --bb-border-radius-pill: 9999px;
   --border-radius-circle: 50%;
+
 }

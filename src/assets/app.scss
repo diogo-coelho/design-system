@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-@import './design_tokens.scss';
-@import './_reset.scss';
-@import './_global.scss';
+@import url('./design_tokens.scss');
+@import url('./_reset.scss');
+@import url('./_global.scss');
 
 /** Components **/
-@import './components/ds_button.scss';
+@import url('./components/ds_button.scss');
+@import url('./components/ds_icon_button.scss');
