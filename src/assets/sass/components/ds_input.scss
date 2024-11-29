@@ -1,0 +1,112 @@
+.input-container {
+  position: relative;
+  width: 280px;
+  display: flex;
+  align-items: center;
+
+  .input {
+    height: 48px;
+    width: inherit;
+    border-radius: var(--bb-border-radius-small);
+    border: 1px solid var(--bb-color-green);
+    padding: var(--bb-spacing-large) var(--bb-spacing-small);
+    font-size: var(--bb-font-size-medium);
+    color: var(--bb-color-green);
+    font-weight: var(--bb-font-weight-light);
+    background-color: var(--bb-color-white);
+    z-index: 1;
+  
+    &::placeholder {
+      font-size: var(--bb-font-size-medium);
+      color: var(--bb-color-green);
+    }
+
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  
+    &:focus-within {
+      outline: 1px solid var(--bb-color-green);
+    }
+  
+    &.align-center {
+      text-align: center;
+    }
+  
+    &.align-left {
+      text-align: left;
+    }
+  
+    &.align-right {
+      text-align: right;
+    }
+
+    &.secondary {
+      border: 1px solid var(--bb-color-grey-3);
+      color: var(--bb-color-black);
+
+      &::placeholder {
+        color: var(--bb-color-grey);
+      }
+
+      &:focus-within {
+        outline: 1px solid var(--bb-color-grey-3);
+      }
+    }
+
+    &.error {
+      border: 1px solid var(--bb-color-red)!important;
+    }
+  }
+
+  &.small {
+    width: 100%;
+    max-width: 144px;
+  }
+
+  &.medium {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  &.normal {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  &.large {
+    width: 100%;
+    max-width: 355px;
+  }
+
+  &.full {
+    width: 100%;
+  }
+  
+  .input + .suffix {
+    position: absolute;
+    width: 32px;
+    height: 27px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    right: var(--bb-spacing-small);
+    z-index: 2; 
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in;   
+  }
+
+  .input + .suffix.active {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-out; 
+  }
+
+  &.error + span {
+    color: var(--bb-color-red);
+    font-size: var(--bb-font-size-small);
+    position: relative;
+    top: -5px;
+  }
+}

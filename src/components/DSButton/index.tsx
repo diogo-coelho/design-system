@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonProps } from '../../types/button'
-import '../../assets/app.scss'
+import '../../assets/sass/app.scss'
 
 const DSButton: React.FC<ButtonProps> = (props: ButtonProps) => {
   const className = (): string => {
