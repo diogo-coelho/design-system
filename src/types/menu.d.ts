@@ -1,7 +1,7 @@
 export interface MenuItem {
   href: string
   label: string
-  active?: 'on' | 'off'
+  active?: Active
 }
 
 type ViewPort = 'mobile-view' | 'tablet-view' | 'desktop-view'
@@ -9,7 +9,7 @@ type ViewPort = 'mobile-view' | 'tablet-view' | 'desktop-view'
 export interface MenuProps {
   menuItems?: MenuItem[]
   viewport?: ViewPort
-  hidden?: 'on' | 'off'
+  hidden?: Active
   closeButton?: string
   handleOnClose?: (data: { args?: T | T[]; event?: MouseEvent<HTMLButtonElement, MouseEvent> }) => T
 }

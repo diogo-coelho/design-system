@@ -1,0 +1,1 @@
+type Active = 'on' | 'off'

@@ -4,5 +4,5 @@ export interface MenuLinkProps {
   href: string
   noBorders?: boolean
   children?: ReactNode
-  active?: 'on' | 'off'
+  active?: Active
 }

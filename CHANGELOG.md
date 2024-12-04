@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.0] - 2024-12-04
+
+### Adicionado
+
+- Novo componente criado - DSModal.
+- Documentação do componente DSModal criado no Storybook.
+- Novo componente criado - DSSelect.
+- Documentação do componente DSSelect criado no Storybook.
+
 ## [0.0.3] - 2024-12-03
 
 ### Adicionado
