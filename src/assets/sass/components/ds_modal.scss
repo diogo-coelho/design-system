@@ -1,0 +1,60 @@
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--bb-color-overlay-black);
+
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    background-color: var(--bb-color-light-grey);
+    margin: 0 auto;
+    padding: var(--bb-spacing-large);
+    visibility: hidden;
+    opacity: 0;
+    top: -20px;
+    transition:
+      visibility 0.3s ease-in,
+      opacity 0.3s ease-in,
+      top 0.3s ease-in;
+
+    .close-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      top: 0px;
+      transition:
+        visibility 0.3s ease-out,
+        opacity 0.3s ease-out,
+        top 0.3s ease-out;
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .modal {
+    &-container {
+      width: 520px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .modal {
+    &-container {
+      width: 792px;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.select {
+  height: 48px;
+
+  &-container {
+    cursor: pointer;
+    width: 280px;
+
+    &.small {
+      width: 100%;
+      width: 280px;
+    }
+
+    &.large {
+      width: 100%;
+      width: 355px;
+    }
+
+    span {
+      top: 5px !important;
+    }
+  }
+
+  &-dropdown {
+    width: inherit;
+    position: absolute;
+    z-index: 0;
+
+    &.small {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    &.large {
+      width: 100%;
+      max-width: 355px;
+    }
+
+    &[data-active='false'] {
+      max-height: 0;
+      transition: max-height 0.2s ease-in;
+
+      & ul {
+        max-height: inherit;
+        visibility: hidden;
+        opacity: 0;
+
+        & li {
+          opacity: 0;
+          max-height: inherit;
+          visibility: hidden;
+          transition:
+            visibility 0.3s ease-in,
+            opacity 0.3s ease-in;
+        }
+      }
+    }
+
+    &[data-active='true'] {
+      max-height: 158px;
+      transition: max-height 0.2s ease-in-out;
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        max-height: inherit;
+        visibility: visible;
+        border: 1px solid var(--bb-color-green);
+        border-radius: var(--bb-border-radius-small);
+        padding-top: 10px;
+        position: relative;
+        top: -10px;
+
+        & li {
+          opacity: 1;
+          display: flex;
+          visibility: visible;
+          justify-content: center;
+          align-items: center;
+          width: inherit;
+          height: 48px;
+          color: var(--bb-color-green);
+          background-color: var(--bb-color-white);
+          transition:
+            visibility 0.3s ease-in,
+            opacity 0.3s ease-in;
+        }
+
+        & li:last-child {
+          border-bottom-left-radius: var(--bb-border-radius-small);
+          border-bottom-right-radius: var(--bb-border-radius-small);
+        }
+
+        & li:hover,
+        & li.selected {
+          font-weight: var(--bb-font-weight-bold);
+          background-color: var(--bb-color-dark-grey);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
