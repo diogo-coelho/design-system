@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react'
-import { IconButtonProps } from '../../types/icon_button'
-import '../../assets/sass/app.scss'
+import { IconButtonProps } from '@/types/icon_button'
+import '@/assets/sass/app.scss'
 
 const DSIconButton = (props: IconButtonProps) => {
   const getClassName = (): string => {

@@ -15,7 +15,7 @@
     font-weight: var(--bb-font-weight-light);
     background-color: var(--bb-color-white);
     z-index: 1;
-  
+
     &::placeholder {
       font-size: var(--bb-font-size-medium);
       color: var(--bb-color-green);
@@ -23,22 +23,22 @@
 
     &[type='number']::-webkit-inner-spin-button,
     &[type='number']::-webkit-outer-spin-button {
-      -webkit-appearance: none;
+      appearance: none;
       margin: 0;
     }
-  
+
     &:focus-within {
       outline: 1px solid var(--bb-color-green);
     }
-  
+
     &.align-center {
       text-align: center;
     }
-  
+
     &.align-left {
       text-align: left;
     }
-  
+
     &.align-right {
       text-align: right;
     }
@@ -57,7 +57,7 @@
     }
 
     &.error {
-      border: 1px solid var(--bb-color-red)!important;
+      border: 1px solid var(--bb-color-red) !important;
     }
   }
 
@@ -84,7 +84,7 @@
   &.full {
     width: 100%;
   }
-  
+
   .input + .suffix {
     position: absolute;
     width: 32px;
@@ -93,14 +93,14 @@
     align-items: center;
     display: flex;
     right: var(--bb-spacing-small);
-    z-index: 2; 
+    z-index: 2;
     transform: rotate(0deg);
-    transition: transform 0.3s ease-in;   
+    transition: transform 0.3s ease-in;
   }
 
   .input + .suffix.active {
     transform: rotate(180deg);
-    transition: transform 0.3s ease-out; 
+    transition: transform 0.3s ease-out;
   }
 
   &.error + span {
