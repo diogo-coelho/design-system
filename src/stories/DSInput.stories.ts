@@ -17,32 +17,34 @@ const meta: Meta<typeof DSInput> = {
     },
     placeholder: {
       control: 'text',
-      description: 'Placeholder do input'
+      description: 'Placeholder do input',
     },
     disabled: {
       control: 'boolean',
-      description: 'Desabilita o input'
+      description: 'Desabilita o input',
     },
     currentValue: {
       control: 'text',
-      description: 'Valor do input'
+      description: 'Valor do input',
     },
     inputSize: {
-      control: ['small', 'normal', 'medium', 'large', 'full'],
-      description: 'Tamanho do input'
+      control: 'select',
+      options: ['small', 'normal', 'medium', 'large', 'full'],
+      description: 'Tamanho do input',
     },
     align: {
-      control: ['center', 'left', 'right'],
-      description: 'Alinhamento do texto dentro do input'
+      control: 'select',
+      options: ['center', 'left', 'right'],
+      description: 'Alinhamento do texto dentro do input',
     },
     error: {
       control: 'text',
-      description: 'Mensagem de erro do input'
+      description: 'Mensagem de erro do input',
     },
     suffix: {
       control: 'text',
-      description: 'Nome da imagem do ícone'
-    }
+      description: 'Nome da imagem do ícone',
+    },
   },
   args: {
     handleOnClick: fn(),
@@ -55,13 +57,13 @@ type Story = StoryObj<typeof DSInput>
 
 export const Default: Story = {
   args: {
-    type: "text"
-  }
+    type: 'text',
+  },
 }
 
 export const WithIcon: Story = {
   args: {
-    type: "text",
-    suffix: imageFile
-  }
+    type: 'text',
+    suffix: imageFile,
+  },
 }
